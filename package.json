@@ -1,0 +1,31 @@
+{
+  "name": "vue3-lerna-ssr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:admin-react": "yarn workspace admin-react build",
+    "build:mobile": "yarn workspace mobile build",
+    "build:home": "yarn workspace home build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "vue": "3.2.31"
+  },
+  "devDependencies": {
+    "lerna": "^3.16.4",
+    "typescript": "^4.6.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
