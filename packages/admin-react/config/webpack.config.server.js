@@ -245,7 +245,12 @@ module.exports = function (webpackEnv) {
     infrastructureLogging: {
       level: 'none',
     },
-    externals: [NodeExternals()],
+    externals: [
+      NodeExternals(),
+      NodeExternals({
+        modulesDir: path.resolve(__dirname, '../../../node_modules'),
+      }),
+    ],
     optimization: {
       minimize: isEnvProduction,
       minimizer: [
