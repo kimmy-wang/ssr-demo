@@ -68,7 +68,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "yarn build:client && yarn build:node",
+    "build": "rimraf ../../dist/admin-react/* &&yarn build:client && yarn build:node",
     "build:client": "cross-env BUILD_PATH=../../dist/admin-react/client node scripts/build.js",
     "build:node": "cross-env BUILD_PATH=../../dist/admin-react/node SSR=1 node scripts/buildSSR.js",
     "test": "node scripts/test.js"
