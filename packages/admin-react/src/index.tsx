@@ -9,7 +9,7 @@ export default App
 
 ReactDOM.hydrate(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={"admin-react"}>
       <App />
     </BrowserRouter>
   </React.StrictMode>,

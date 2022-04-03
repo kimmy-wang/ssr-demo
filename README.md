@@ -12,6 +12,6 @@
 
 1. `yarn build`
 
-2. `node server` or `node server2`
+2. `node server`
 
 3. open `127.0.0.1:3000` in your browser

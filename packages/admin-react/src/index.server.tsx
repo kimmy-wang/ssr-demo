@@ -5,7 +5,7 @@ import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 
 export default function createApp(url: string) {
-  return () => <StaticRouter location={url}>
+  return () => <StaticRouter basename={"admin-react"} location={url}>
     <App/>
   </StaticRouter>
 }
