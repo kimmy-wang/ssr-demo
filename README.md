@@ -8,8 +8,6 @@
 
 1. `yarn intsall`
 
-2. `lerna bootstrap`
-
 ## Run 
 
 1. `yarn build`
