@@ -6,9 +6,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npm-run-all --parallel build:*",
-    "build:admin-react": "cd packages/admin-react && yarn build",
-    "build:mobile": "cd packages/mobile && yarn build",
-    "build:home": "cd packages/home && yarn build"
+    "build:admin-react": "yarn workspace admin-react build",
+    "build:mobile": "yarn workspace mobile build",
+    "build:home": "yarn workspace home build"
   },
   "keywords": [],
   "author": "",
@@ -26,5 +26,8 @@
   },
   "engines": {
     "node": ">=14.0.0"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

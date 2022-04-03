@@ -110,9 +110,12 @@ module.exports = {
 
     // 不要将需要被 webpack 处理的依赖变为外部扩展
     // 也应该把修改 `global` 的依赖 (例如各种 polyfill) 整理成一个白名单
-    webpackConfig.externals(
-      nodeExternals({ allowlist: [/\.(css|vue)$/, /ant-design-vue/] })
-    );
+    webpackConfig.externals([
+      nodeExternals(),
+      nodeExternals({
+        modulesDir: path.resolve(__dirname, "../../node_modules"),
+      }),
+    ]);
 
     webpackConfig.optimization.splitChunks(false).minimize(false);
 
