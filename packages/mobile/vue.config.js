@@ -55,6 +55,10 @@ module.exports = {
         new webpack.IgnorePlugin({
           resourceRegExp: /(\/es\/locale)|(\.md$)/,
         }),
+        new webpack.DefinePlugin({
+          __VUE_OPTIONS_API__: true,
+          __VUE_PROD_DEVTOOLS__: true,
+        }),
       ],
     };
     if (process.env.NODE_ENV === "production") {
